@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Doshka.API", "Doshka.API\Doshka.API.csproj", "{FB9CA3CC-7C02-43D6-908E-8E89DAFB1877}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Doshka.Domain", "Doshka.Domain\Doshka.Domain.csproj", "{70E7DD5F-6B73-49C1-9F94-6F8FD37DBAFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Doshka.Infrastructure", "Doshka.Infrastructure\Doshka.Infrastructure.csproj", "{B65CCA3D-B82C-4F74-809E-A1F39CCD4B2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Doshka.Domain.Tests", "Doshka.Domain.Tests\Doshka.Domain.Tests.csproj", "{5958BEFC-B9B8-4B4C-B37F-4E1EB7B365B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Doshka.Infrastructure.Tests", "Doshka.Infrastructure.Tests\Doshka.Infrastructure.Tests.csproj", "{17B6C3EE-C256-4F2D-867C-B559BAB4F795}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Doshka.API.Tests", "Doshka.API.Tests\Doshka.API.Tests.csproj", "{137BF0AA-B9B0-477E-B0B4-C543A63EDF0E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{18517E6D-A512-4EA3-910F-E20485C26E1B}"
+	ProjectSection(SolutionItems) = preProject
+		README.MD = README.MD
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{AA46679C-CBD5-4A6B-9C7D-E5D1596F10DA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{3C65043C-FA0A-4BD3-8394-02CDB85A31E1}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\ci.yml = .github\workflows\ci.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB9CA3CC-7C02-43D6-908E-8E89DAFB1877}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB9CA3CC-7C02-43D6-908E-8E89DAFB1877}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB9CA3CC-7C02-43D6-908E-8E89DAFB1877}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB9CA3CC-7C02-43D6-908E-8E89DAFB1877}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70E7DD5F-6B73-49C1-9F94-6F8FD37DBAFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70E7DD5F-6B73-49C1-9F94-6F8FD37DBAFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70E7DD5F-6B73-49C1-9F94-6F8FD37DBAFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70E7DD5F-6B73-49C1-9F94-6F8FD37DBAFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B65CCA3D-B82C-4F74-809E-A1F39CCD4B2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B65CCA3D-B82C-4F74-809E-A1F39CCD4B2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B65CCA3D-B82C-4F74-809E-A1F39CCD4B2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B65CCA3D-B82C-4F74-809E-A1F39CCD4B2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5958BEFC-B9B8-4B4C-B37F-4E1EB7B365B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5958BEFC-B9B8-4B4C-B37F-4E1EB7B365B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5958BEFC-B9B8-4B4C-B37F-4E1EB7B365B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5958BEFC-B9B8-4B4C-B37F-4E1EB7B365B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17B6C3EE-C256-4F2D-867C-B559BAB4F795}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17B6C3EE-C256-4F2D-867C-B559BAB4F795}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17B6C3EE-C256-4F2D-867C-B559BAB4F795}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17B6C3EE-C256-4F2D-867C-B559BAB4F795}.Release|Any CPU.Build.0 = Release|Any CPU
+		{137BF0AA-B9B0-477E-B0B4-C543A63EDF0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{137BF0AA-B9B0-477E-B0B4-C543A63EDF0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{137BF0AA-B9B0-477E-B0B4-C543A63EDF0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{137BF0AA-B9B0-477E-B0B4-C543A63EDF0E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3C65043C-FA0A-4BD3-8394-02CDB85A31E1} = {AA46679C-CBD5-4A6B-9C7D-E5D1596F10DA}
+	EndGlobalSection
+EndGlobal
