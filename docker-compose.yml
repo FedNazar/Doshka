@@ -1,0 +1,42 @@
+services:
+  doshka:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "${DOSHKA_PORT}:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=${ASPNETCORE_ENVIRONMENT}
+      - ConnectionStrings__SQLServer=Server=db-server;Database=DoshkaDB;User=sa;Password=${SQLSERVER_SA_PASSWORD};TrustServerCertificate=true
+      - ConnectionStrings__Redis=redis:${REDIS_PORT},password=${REDIS_PASSWORD}
+    depends_on:
+      db-server:
+        condition: service_healthy
+      cache-server:
+        condition: service_started
+
+  db-server:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    ports:
+      - "${SQLSERVER_PORT}:1433"
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=${SQLSERVER_SA_PASSWORD}
+    volumes:
+      - ${DB_VOLUME_LOCATION}:/var/opt/mssql
+    healthcheck:
+      test: ["CMD", "/opt/mssql-tools18/bin/sqlcmd", "-C", "-S", "localhost", "-U", "sa", "-P", "${SQLSERVER_SA_PASSWORD}", "-Q", "SELECT 1"]
+      interval: 15s
+      retries: 3
+      start_period: 40s
+
+  cache-server:
+    image: redis:latest
+    ports:
+      - "${REDIS_PORT}:6379"
+    command: redis-server --requirepass ${REDIS_PASSWORD}
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 15s
+      retries: 3
+      start_period: 15s
