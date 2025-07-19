@@ -22,6 +22,7 @@ services:
     environment:
       - ACCEPT_EULA=Y
       - SA_PASSWORD=${SQLSERVER_SA_PASSWORD}
+      - MSSQL_PID=${SQLSERVER_EDITION}
     volumes:
       - ${DB_VOLUME_LOCATION}:/var/opt/mssql
     healthcheck:
