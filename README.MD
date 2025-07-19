@@ -41,6 +41,10 @@ authentication, which may not be ideal for some games.**
 - Run `dotnet publish -c Release` to build it in Release mode
 - Run the API using `dotnet Doshka.API.dll`
 
+## Running using Docker Compose
+
+Make a .env file on the example in .env_example and run the server using `docker compose up --build`.
+
 ## Documentation
 
 Go to Doshka.API folder and run `dotnet run`. This will run the server 
